@@ -1,15 +1,28 @@
 //
-//  SecondViewController.swift
+//  TwoViewController.swift
 //  AppRedSocial
 //
-//  Created by admin on 12/10/20.
+//  Created by admin on 13/10/20.
 //  Copyright © 2020 Alvaro Fiestas. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class TwoViewController: UIViewController {
 
+    //TEXTEDIT...
+    
+    @IBOutlet weak var txtnombre: UITextField!
+    
+    
+    @IBOutlet weak var txtapellido: UITextField!
+    
+    
+    @IBOutlet weak var txtemail: UITextField!
+    
+    
+    @IBOutlet weak var password: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +40,8 @@ class SecondViewController: UIViewController {
     }
     */
 
+    @IBAction func up(_ sender: Any) {
+        
+        
+    }
 }
