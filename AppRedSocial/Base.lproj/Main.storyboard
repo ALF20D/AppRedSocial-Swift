@@ -125,11 +125,11 @@
                                         <edgeInsets key="layoutMargins" top="11" left="16" bottom="8" right="17"/>
                                     </stackView>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="upo-1s-LEq">
-                                        <rect key="frame" x="16" y="420.5" width="381" height="317"/>
+                                        <rect key="frame" x="16" y="420.5" width="381" height="272.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pAo-GN-hKL">
-                                        <rect key="frame" x="16" y="745.5" width="381" height="20.5"/>
+                                        <rect key="frame" x="16" y="701" width="381" height="20.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="URF-Bm-Idh">
                                                 <rect key="frame" x="59" y="0.0" width="263.5" height="20.5"/>
@@ -148,12 +148,35 @@
                                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="twY-fD-X9g" kind="show" id="2Vw-0N-DYf"/>
+                                                            <segue destination="twY-fD-X9g" kind="presentation" id="2Vw-0N-DYf"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fGJ-Bm-HfX">
+                                        <rect key="frame" x="16" y="729.5" width="381" height="36.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recuperar contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-3a-HuU">
+                                                <rect key="frame" x="16" y="8" width="172.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFo-Hj-RZD">
+                                                <rect key="frame" x="192.5" y="8" width="172.5" height="20.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Recuperar">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="SC0-od-qLT" kind="show" id="b53-Hb-NcL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                                     </stackView>
                                 </subviews>
                                 <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="17"/>
@@ -184,7 +207,7 @@
             <objects>
                 <viewController title="Registro" id="twY-fD-X9g" customClass="TwoViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xfd-Yu-TFz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="398" affinity="maxX"/>
@@ -192,7 +215,7 @@
                         </userGuides>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ech-VM-Ps9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="555"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="BhB-SK-tdd">
                                         <rect key="frame" x="16" y="8" width="382" height="193"/>
@@ -223,26 +246,18 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTr-jL-oUA">
-                                        <rect key="frame" x="16" y="209" width="382" height="300"/>
+                                        <rect key="frame" x="16" y="209" width="382" height="250"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="Iqh-BB-zUq"/>
-                                            <constraint firstAttribute="height" constant="300" id="Nxa-na-1tc"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="wPR-Ny-Eaw"/>
-                                        </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uzo-aA-DUe">
-                                        <rect key="frame" x="16" y="517" width="382" height="30"/>
+                                        <rect key="frame" x="16" y="467" width="382" height="333"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l7f-16-Vot">
-                                                <rect key="frame" x="160" y="0.0" width="62" height="30"/>
+                                                <rect key="frame" x="160" y="0.0" width="62" height="333"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym7-Az-WEA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="333"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="z4K-Gs-5Ml"/>
-                                                        </constraints>
                                                         <state key="normal" title="Registrar"/>
                                                         <connections>
                                                             <action selector="up:" destination="twY-fD-X9g" eventType="touchUpInside" id="itc-bY-Kbd"/>
@@ -253,12 +268,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Uzo-aA-DUe" firstAttribute="top" secondItem="sTr-jL-oUA" secondAttribute="bottom" id="1i7-Kz-lZa"/>
-                                    <constraint firstItem="sTr-jL-oUA" firstAttribute="top" secondItem="BhB-SK-tdd" secondAttribute="bottom" id="DNV-R0-X77"/>
-                                    <constraint firstItem="sTr-jL-oUA" firstAttribute="top" secondItem="BhB-SK-tdd" secondAttribute="bottom" id="gq4-17-fJK"/>
-                                    <constraint firstItem="Uzo-aA-DUe" firstAttribute="top" secondItem="sTr-jL-oUA" secondAttribute="bottom" id="jaO-pQ-SXd"/>
-                                </constraints>
                                 <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                             </stackView>
                         </subviews>
@@ -281,7 +290,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCx-Id-0JD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1895.6521739130437" y="-104.46428571428571"/>
+            <point key="canvasLocation" x="1907" y="-313"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3vm-LO-Mvg">
+            <objects>
+                <viewController id="SC0-od-qLT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3SU-X6-8Vt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="g3u-I4-ruJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DJU-XB-5uo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBa-FK-jMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="417"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6U5-30-6ag">

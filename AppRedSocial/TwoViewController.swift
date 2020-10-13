@@ -8,11 +8,11 @@
 
 import UIKit
 
-class TwoViewController: UIViewController {
+class TwoViewController: UIViewController, UITextFieldDelegate {
 
     var arrayPersonas = [Persona]()
     
-    //TEXTEDIT...
+
     
     @IBOutlet weak var txtnombre: UITextField!
     
@@ -26,6 +26,7 @@ class TwoViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
+        view.backgroundColor = UIColor.blue
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -52,8 +53,29 @@ class TwoViewController: UIViewController {
         
         arrayPersonas.append(persona)
         
-        for elemento in arrayPersonas {
-            print(elemento.name)
+        if persona.name != "" && persona.lastname != "" && persona.email != ""
+            && persona.password != ""
+        {
+            let alertController = UIAlertController(title: "App", message: "Registro correcto", preferredStyle: .alert)
+                   let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                   }
+                   alertController.addAction(action1)
+            self.present(alertController, animated: true, completion: nil)
         }
+        
+        else
+        {
+            let alertController2 = UIAlertController(title: "App", message: "Llene todos los campos", preferredStyle: .alert)
+                          let action2 = UIAlertAction(title: "OK", style: .destructive) { (action:UIAlertAction) in
+                          }
+                          alertController2.addAction(action2)
+            self.present(alertController2, animated: true, completion: nil)
+        }
+        
+        
+        
     }
+    
+    
+   
 }
