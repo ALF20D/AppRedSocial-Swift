@@ -297,7 +297,7 @@
         <scene sceneID="3vm-LO-Mvg">
             <objects>
                 <viewController id="SC0-od-qLT" customClass="ViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="3SU-X6-8Vt">
+                    <view key="view" contentMode="scaleToFill" id="3SU-X6-8Vt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
@@ -305,8 +305,8 @@
                             <userLayoutGuide location="386" affinity="minX"/>
                         </userGuides>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Oam-ww-VRL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="876"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Oam-ww-VRL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresar email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axS-Co-FCH">
                                         <rect key="frame" x="35" y="8" width="344" height="32"/>
@@ -340,8 +340,8 @@
                                             <constraint firstAttribute="height" constant="150" id="QDr-k3-ZlX"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRJ-w0-Tnd">
-                                        <rect key="frame" x="35" y="295" width="344" height="539"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRJ-w0-Tnd">
+                                        <rect key="frame" x="35" y="295" width="344" height="471"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="539" id="1po-ie-TOo"/>
