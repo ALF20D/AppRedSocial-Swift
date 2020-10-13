@@ -11,13 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
-    
-   
     @IBOutlet weak var pass: UITextField!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+      
     }
 
 
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
              self.present(alertController2, animated: true, completion: nil)
          }
     }
+  
     
 }
 
