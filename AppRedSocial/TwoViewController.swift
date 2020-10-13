@@ -10,6 +10,8 @@ import UIKit
 
 class TwoViewController: UIViewController {
 
+    var arrayPersonas = [Persona]()
+    
     //TEXTEDIT...
     
     @IBOutlet weak var txtnombre: UITextField!
@@ -42,6 +44,16 @@ class TwoViewController: UIViewController {
 
     @IBAction func up(_ sender: Any) {
         
+        let persona = Persona()
+        persona.name = txtnombre.text
+        persona.lastname = txtapellido.text
+        persona.email = txtemail.text
+        persona.password = password.text
         
+        arrayPersonas.append(persona)
+        
+        for elemento in arrayPersonas {
+            print(elemento.name)
+        }
     }
 }
