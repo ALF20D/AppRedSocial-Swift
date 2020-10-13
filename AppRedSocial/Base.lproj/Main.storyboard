@@ -253,11 +253,12 @@
                                         <rect key="frame" x="16" y="467" width="382" height="333"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l7f-16-Vot">
-                                                <rect key="frame" x="160" y="0.0" width="62" height="333"/>
+                                                <rect key="frame" x="142.5" y="0.0" width="97" height="333"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym7-Az-WEA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="333"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="333"/>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <state key="normal" title="Registrar"/>
                                                         <connections>
                                                             <action selector="up:" destination="twY-fD-X9g" eventType="touchUpInside" id="itc-bY-Kbd"/>
