@@ -26,7 +26,7 @@ class TwoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     
     override func viewDidLoad() {
-        view.backgroundColor = UIColor.blue
+      //  view.backgroundColor = UIColor.blue
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
