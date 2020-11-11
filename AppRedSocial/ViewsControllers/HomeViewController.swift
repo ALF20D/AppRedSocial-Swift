@@ -20,26 +20,20 @@ class HomeViewController: UIViewController {
         Auth.auth().addStateDidChangeListener { (auth, user) in
             
             if(user != nil)
+                
                    {
                     
-                       let users = Firestore.firestore().collection("users")
-                    
-                       let query = users.whereField("uid", isEqualTo: auth.currentUser?.uid)
-                    
-                        query.getDocuments { (querySnapshot, err) in
-                            
+                   Firestore.firestore().collection("users")
+                    .whereField("uid", isEqualTo: auth.currentUser?.uid as Any)
+                     .getDocuments { (querySnapshot, err) in
                             if err != nil {
-                                
                                 print("Ocurrió un error.")
                             }
-                            
                             //print(querySnapshot?.documents[0].data())
-                            
                             for document in querySnapshot!.documents {
                                 self.PersonalInfo.text = document.data()["nombre"] as? String
                             }
-  
-                    }
+                       }
                            
                    }
         }
