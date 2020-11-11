@@ -279,8 +279,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0V-kq-PEB">
-                                <rect key="frame" x="169.5" y="438" width="75.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0V-kq-PEB">
+                                <rect key="frame" x="173" y="438" width="68.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -293,10 +293,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zVx-dk-lHa"/>
                     </view>
+                    <connections>
+                        <outlet property="PersonalInfo" destination="X0V-kq-PEB" id="SeW-U4-pIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCj-Uh-LgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="67"/>
+            <point key="canvasLocation" x="2794.202898550725" y="66.964285714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6U5-30-6ag">
