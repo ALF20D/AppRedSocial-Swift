@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E55E3886CA515CD02C7DC39 /* Pods_AppRedSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F0F2CEDE2A45E1572EEADAE /* Pods_AppRedSocial.framework */; };
+		848EB055255D710B009F4F2D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EB054255D710B009F4F2D /* TableViewCell.swift */; };
+		848EB05D255D7CEC009F4F2D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EB05C255D7CEC009F4F2D /* ProfileViewController.swift */; };
 		84A495E3253569D200DBECCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A495E2253569D200DBECCE /* AppDelegate.swift */; };
 		84A495E5253569D200DBECCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A495E4253569D200DBECCE /* SceneDelegate.swift */; };
 		84A495E7253569D200DBECCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A495E6253569D200DBECCE /* ViewController.swift */; };
@@ -18,7 +20,7 @@
 		84DA71EC255AFA490072F3DB /* RecoverAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA71EB255AFA490072F3DB /* RecoverAccountViewController.swift */; };
 		84E4ABAF255A87150078A1CA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4ABAE255A87150078A1CA /* SignUpViewController.swift */; };
 		84E4ABB1255A87270078A1CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4ABB0255A87270078A1CA /* LoginViewController.swift */; };
-		84E4ABB3255A87550078A1CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4ABB2255A87550078A1CA /* HomeViewController.swift */; };
+		84E4ABB3255A87550078A1CA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4ABB2255A87550078A1CA /* FeedViewController.swift */; };
 		84E4ABB6255A8EA20078A1CA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E4ABB5255A8EA20078A1CA /* Utilities.swift */; };
 		84E4ABB8255A94EA0078A1CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E4ABB7255A94EA0078A1CA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,8 @@
 		119ECAB8C36B7A8A8DCD2954 /* Pods-AppRedSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRedSocial.debug.xcconfig"; path = "Target Support Files/Pods-AppRedSocial/Pods-AppRedSocial.debug.xcconfig"; sourceTree = "<group>"; };
 		4F0F2CEDE2A45E1572EEADAE /* Pods_AppRedSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRedSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD6867FCC1D6F6F14C9DCF8 /* Pods-AppRedSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRedSocial.release.xcconfig"; path = "Target Support Files/Pods-AppRedSocial/Pods-AppRedSocial.release.xcconfig"; sourceTree = "<group>"; };
+		848EB054255D710B009F4F2D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		848EB05C255D7CEC009F4F2D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		84A495DF253569D200DBECCE /* AppRedSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRedSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A495E2253569D200DBECCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A495E4253569D200DBECCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +43,7 @@
 		84DA71EB255AFA490072F3DB /* RecoverAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverAccountViewController.swift; sourceTree = "<group>"; };
 		84E4ABAE255A87150078A1CA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84E4ABB0255A87270078A1CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		84E4ABB2255A87550078A1CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84E4ABB2255A87550078A1CA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		84E4ABB5255A8EA20078A1CA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		84E4ABB7255A94EA0078A1CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,8 +117,9 @@
 				84A495E6253569D200DBECCE /* ViewController.swift */,
 				84E4ABAE255A87150078A1CA /* SignUpViewController.swift */,
 				84E4ABB0255A87270078A1CA /* LoginViewController.swift */,
-				84E4ABB2255A87550078A1CA /* HomeViewController.swift */,
+				84E4ABB2255A87550078A1CA /* FeedViewController.swift */,
 				84DA71EB255AFA490072F3DB /* RecoverAccountViewController.swift */,
+				848EB05C255D7CEC009F4F2D /* ProfileViewController.swift */,
 			);
 			path = ViewsControllers;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			children = (
 				84E4ABB5255A8EA20078A1CA /* Utilities.swift */,
 				84DA71E9255AE2440072F3DB /* Constants.swift */,
+				848EB054255D710B009F4F2D /* TableViewCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -249,9 +255,11 @@
 				84E4ABB6255A8EA20078A1CA /* Utilities.swift in Sources */,
 				84DA71EC255AFA490072F3DB /* RecoverAccountViewController.swift in Sources */,
 				84E4ABAF255A87150078A1CA /* SignUpViewController.swift in Sources */,
+				848EB055255D710B009F4F2D /* TableViewCell.swift in Sources */,
+				848EB05D255D7CEC009F4F2D /* ProfileViewController.swift in Sources */,
 				84E4ABB1255A87270078A1CA /* LoginViewController.swift in Sources */,
 				84A495E5253569D200DBECCE /* SceneDelegate.swift in Sources */,
-				84E4ABB3255A87550078A1CA /* HomeViewController.swift in Sources */,
+				84E4ABB3255A87550078A1CA /* FeedViewController.swift in Sources */,
 				84DA71EA255AE2440072F3DB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

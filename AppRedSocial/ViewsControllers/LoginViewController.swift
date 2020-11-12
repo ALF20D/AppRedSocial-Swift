@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITabBarControllerDelegate {
 
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -58,8 +58,8 @@ class LoginViewController: UIViewController {
                 self.ErrorLabel.alpha = 1
             }
             else {
-                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-                self.view.window?.rootViewController = homeViewController
+                let feedViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? UITabBarController
+                self.view.window?.rootViewController = feedViewController
                 self.view.window?.makeKeyAndVisible()
             
           }
