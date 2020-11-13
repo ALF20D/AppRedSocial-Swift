@@ -46,24 +46,52 @@ class LoginViewController: UIViewController, UITabBarControllerDelegate {
     */
 
     
+    func validateFields() -> String? {
+        
+        if EmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            PasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        
+        {
+            return "Por favor, llenar todos los campos."
+        }
+        
+        return nil
+    }
+    
+    
+    func monstrarError(_ msg: String)  {
+        ErrorLabel.text = msg
+        ErrorLabel.alpha = 1
+    }
+    
     @IBAction func LoginTapped(_ sender: Any) {
         
-      let email = EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
-            
-            if err != nil {
-                self.ErrorLabel.text = err!.localizedDescription
-                self.ErrorLabel.alpha = 1
-            }
-            else {
-                let feedViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? UITabBarController
-                self.view.window?.rootViewController = feedViewController
-                self.view.window?.makeKeyAndVisible()
-            
-          }
+        let error = validateFields()
+        if error != nil {
+            monstrarError(error!)
         }
+        
+        else {
+            ErrorLabel.alpha = 0
+            let email = EmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+              let password = PasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+              
+              Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
+                  
+                  if err != nil {
+                      self.ErrorLabel.text = err!.localizedDescription
+                      self.ErrorLabel.alpha = 1
+                  }
+                  else {
+                      let feedViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? UITabBarController
+                      self.view.window?.rootViewController = feedViewController
+                      self.view.window?.makeKeyAndVisible()
+                  
+                }
+              }
+        }
+        
+      
     }
     
 }

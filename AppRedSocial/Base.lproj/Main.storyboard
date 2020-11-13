@@ -238,7 +238,7 @@
                                         </constraints>
                                         <state key="normal" title="Enviar un email"/>
                                         <connections>
-                                            <action selector="RecuperarCuena:" destination="zcY-0S-lpF" eventType="touchUpInside" id="yiV-r4-HAp"/>
+                                            <action selector="RecuperarCuenta:" destination="zcY-0S-lpF" eventType="touchUpInside" id="6Kq-Jc-3uC"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-rC-F35">

@@ -87,13 +87,13 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     // Open...
-                    self.transitionToHome()
+                    self.transitionToFeed()
                 }
             }
         }
     }
     
-    func transitionToHome() {
+    func transitionToFeed() {
         
         let feedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? FeedViewController
         view.window?.rootViewController = feedViewController

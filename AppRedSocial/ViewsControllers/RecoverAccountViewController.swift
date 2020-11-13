@@ -40,7 +40,8 @@ class RecoverAccountViewController: UIViewController {
     }
     
     
-    @IBAction func RecuperarCuena(_ sender: Any) {
+    
+    @IBAction func RecuperarCuenta(_ sender: Any) {
         
         let error = ValidateTextField()
         
@@ -53,8 +54,9 @@ class RecoverAccountViewController: UIViewController {
             
             Auth.auth().sendPasswordReset(withEmail: email) { (err) in
                 if err != nil {
-                    
+
                     self.MensajeLabel.text = "El email ingresado no está registrado u ocurrió un error."
+                    self.MensajeLabel.alpha = 1
                 }
                 else {
                     self.MensajeLabel.text = "Se envió un enlace al correo para reestablecer la contraseña."
@@ -63,6 +65,7 @@ class RecoverAccountViewController: UIViewController {
                 }
             }
         }
+        
     }
     
 }
