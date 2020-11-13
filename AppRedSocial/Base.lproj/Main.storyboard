@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aeg-OT-IFp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aeg-OT-IFp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -364,7 +364,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
             </objects>
             <point key="canvasLocation" x="4554" y="817"/>
         </scene>
-        <!--Item-->
+        <!--Config-->
         <scene sceneID="R1m-ht-GFj">
             <objects>
                 <viewController id="u8B-lj-wz6" sceneMemberID="viewController">
@@ -374,7 +374,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                         <viewLayoutGuide key="safeArea" id="rkC-wh-1xn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zP4-E4-cvr"/>
+                    <tabBarItem key="tabBarItem" title="Config" image="filemenu.and.selection" catalog="system" id="zP4-E4-cvr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHH-sj-4Dm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,14 +387,26 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                     <view key="view" contentMode="scaleToFill" id="dvI-GQ-TyP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B51-76-2M6">
+                                <rect key="frame" x="163" y="56" width="88" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WZI-3m-clU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Zep-MX-NKM"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="B51-76-2M6" id="y4t-OT-VjP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4e-gR-hrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4554" y="45"/>
+            <point key="canvasLocation" x="4552.1739130434789" y="44.866071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6U5-30-6ag">
@@ -439,6 +451,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
         </scene>
     </scenes>
     <resources>
+        <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
