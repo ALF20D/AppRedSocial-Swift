@@ -43,7 +43,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngegg" translatesAutoresizingMaskIntoConstraints="NO" id="p57-Rw-nP4">
-                                <rect key="frame" x="85" y="227" width="264" height="314"/>
+                                <rect key="frame" x="95" y="227" width="254" height="314"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UxX-51-I3u"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="UxX-51-I3u" firstAttribute="bottom" secondItem="C1n-z9-HQn" secondAttribute="bottom" constant="40" id="HhD-K7-uMJ"/>
                             <constraint firstItem="C1n-z9-HQn" firstAttribute="top" secondItem="p57-Rw-nP4" secondAttribute="bottom" constant="161" id="NCb-iw-hWO"/>
                             <constraint firstItem="UxX-51-I3u" firstAttribute="trailing" secondItem="C1n-z9-HQn" secondAttribute="trailing" constant="40" id="Oro-kP-OzX"/>
-                            <constraint firstItem="p57-Rw-nP4" firstAttribute="leading" secondItem="UxX-51-I3u" secondAttribute="leading" constant="85" id="Q7b-Jn-bKf"/>
+                            <constraint firstItem="p57-Rw-nP4" firstAttribute="leading" secondItem="UxX-51-I3u" secondAttribute="leading" constant="95" id="Q7b-Jn-bKf"/>
                             <constraint firstItem="C1n-z9-HQn" firstAttribute="leading" secondItem="UxX-51-I3u" secondAttribute="leading" constant="40" id="vFB-QB-n61"/>
                         </constraints>
                     </view>
@@ -87,7 +87,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QvP-nh-EoB">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-TW-gPd">
                                         <rect key="frame" x="0.0" y="140" width="334" height="50"/>

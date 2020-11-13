@@ -30,8 +30,7 @@ class ProfileViewController: UIViewController {
                             }
                             //print(querySnapshot?.documents[0].data())
                             for document in querySnapshot!.documents {
-                               self.nameLabel.text = document.data()["nombre"] as? String
-                                
+                                self.nameLabel.text = document.data()["nombre"] as? String
                                 print("Desde Profile: ",document.data()["nombre"] as? String)
                             }
                        }

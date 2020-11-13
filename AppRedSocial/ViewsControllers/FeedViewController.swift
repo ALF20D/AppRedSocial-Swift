@@ -21,7 +21,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellview", for: indexPath) as! TableViewCell
-        cell.configure(owner: fixedposts[indexPath.row].data()["owner_uid"] as! String, posts: fixedposts[indexPath.row].data()["comment"] as! String)
+        cell.configure(owner: fixedposts[indexPath.row].data()["full_name"] as! String, posts: fixedposts[indexPath.row].data()["comment"] as! String)
         return cell
     }
     
