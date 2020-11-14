@@ -11,6 +11,7 @@ import Firebase
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var CreatePost: UIButton!
     var fixedposts : [Dictionary<String, AnyObject>] = []
 
     @IBOutlet weak var TableView: UITableView!
@@ -28,6 +29,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpElements()
         
         TableView.rowHeight = UITableView.automaticDimension
         
@@ -37,6 +39,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func setUpElements(){
+        
+        // Aplicar estilos a los elementos
+
+        Utilities.styleHollowButton(CreatePost)
+        
+    }
     
     
     func loadFeed( completion:  @escaping () -> Void ) {
