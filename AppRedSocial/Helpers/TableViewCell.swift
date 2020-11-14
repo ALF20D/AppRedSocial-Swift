@@ -16,10 +16,10 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var CellView: UIView!
     
     
-    func configure(owner: String, posts: String)
+    func configure(comments: String, fullname: String)
     {
-        ownerLabel.text = owner
-        PostLabel.text = posts
+        ownerLabel.text = fullname
+        PostLabel.text = comments
         CellView.layer.shadowColor = UIColor.gray.cgColor
         CellView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         CellView.layer.shadowOpacity = 1.0

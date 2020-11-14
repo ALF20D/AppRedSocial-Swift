@@ -95,7 +95,7 @@ class SignUpViewController: UIViewController {
     
     func transitionToFeed() {
         
-        let feedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? FeedViewController
+        let feedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? UITabBarController
         view.window?.rootViewController = feedViewController
         view.window?.makeKeyAndVisible()
     }
