@@ -42,8 +42,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setUpElements(){
         
         // Aplicar estilos a los elementos
-
-        Utilities.styleHollowButton(CreatePost)
         
     }
     
