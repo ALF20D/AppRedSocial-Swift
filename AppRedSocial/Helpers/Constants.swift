@@ -14,6 +14,8 @@ struct Constants {
     struct Storyboard {
         
      static let feedViewController = "FeedVC"
+     static let commentViewController = "CommentVC"
+     static let postViewController = "PostVC"
         
     }
 }

@@ -11,7 +11,8 @@ import Firebase
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var CreatePost: UIButton!
+    @IBOutlet weak var PostButton: UIButton!
+    
     var fixedposts : [Dictionary<String, AnyObject>] = []
 
     @IBOutlet weak var TableView: UITableView!
@@ -21,7 +22,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(identifier: "test") as? CommentsViewController
+        let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.commentViewController) as? CommentsViewController
         
         self.navigationController?.pushViewController(vc!, animated: true)
      
@@ -52,7 +53,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func setUpElements(){
         
         // Aplicar estilos a los elementos
+        Utilities.styleFilledButton(PostButton)
         
+    }
+    
+    
+    @IBAction func PostClick(_ sender: Any) {
+        
+        let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.postViewController) as? PostViewController
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+    
     }
     
     

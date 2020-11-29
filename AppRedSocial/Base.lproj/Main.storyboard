@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UxM-6v-Mdd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c0N-lv-9Lq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -289,11 +289,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="304" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2J2-5G-PPa">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="5qC-iU-SK0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1p-4G-qyW">
+                                            <rect key="frame" x="324" y="5" width="61" height="49"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <state key="normal" title="+"/>
+                                            <connections>
+                                                <action selector="PostClick:" destination="7tG-d5-t1I" eventType="touchUpInside" id="iUy-Bq-ywC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="G1p-4G-qyW" firstAttribute="leading" secondItem="5qC-iU-SK0" secondAttribute="leading" constant="324" id="S5Q-ZH-tce"/>
+                                        <constraint firstAttribute="bottom" secondItem="G1p-4G-qyW" secondAttribute="bottom" constant="6" id="c9x-ZH-vWK"/>
+                                        <constraint firstItem="G1p-4G-qyW" firstAttribute="top" secondItem="5qC-iU-SK0" secondAttribute="top" constant="5" id="nUk-yQ-n6S"/>
+                                        <constraint firstAttribute="trailing" secondItem="G1p-4G-qyW" secondAttribute="trailing" constant="29" id="xvO-hh-3FG"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellview" rowHeight="282" id="9G6-b0-f2M" customClass="TableViewCell" customModule="AppRedSocial" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="282"/>
+                                        <rect key="frame" x="0.0" y="88" width="414" height="282"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9G6-b0-f2M" id="lyz-WA-YdX">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="282"/>
@@ -364,17 +384,33 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                     </view>
                     <navigationItem key="navigationItem" id="NQt-sn-eI9"/>
                     <connections>
+                        <outlet property="PostButton" destination="G1p-4G-qyW" id="V7I-ZQ-vGn"/>
                         <outlet property="TableView" destination="2J2-5G-PPa" id="6ta-pp-7Md"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCj-Uh-LgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4054" y="876"/>
+            <point key="canvasLocation" x="4962.3188405797109" y="875.89285714285711"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="C7W-Bh-ISU">
+            <objects>
+                <viewController storyboardIdentifier="PostVC" id="VEJ-ZD-k6W" customClass="PostViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJN-yt-I67">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="haA-th-WJg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yt-3d-LKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5900" y="523"/>
         </scene>
         <!--Comments View Controller-->
         <scene sceneID="LPb-ea-qa1">
             <objects>
-                <viewController storyboardIdentifier="test" id="Ca4-Rn-TPx" customClass="CommentsViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentVC" id="Ca4-Rn-TPx" customClass="CommentsViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XE3-Wy-pVk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,12 +420,12 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUB-Ev-VWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4994" y="1278"/>
+            <point key="canvasLocation" x="5902.898550724638" y="1277.6785714285713"/>
         </scene>
         <!--Profile-->
         <scene sceneID="BCB-Zp-qbS">
             <objects>
-                <viewController title="Profile" id="XJc-Nw-VEI" customClass="ProfileViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" title="Profile" id="XJc-Nw-VEI" customClass="ProfileViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvI-GQ-TyP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,7 +448,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4e-gR-hrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4054" y="80"/>
+            <point key="canvasLocation" x="4962" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6U5-30-6ag">
@@ -434,6 +470,24 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QF5-EB-AOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="72Y-O1-Wv1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c0N-lv-9Lq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oxm-Eq-OvZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7tG-d5-t1I" kind="relationship" relationship="rootViewController" id="mZl-u0-yZw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaR-eZ-4pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4053.6231884057975" y="875.89285714285711"/>
         </scene>
     </scenes>
     <resources>
