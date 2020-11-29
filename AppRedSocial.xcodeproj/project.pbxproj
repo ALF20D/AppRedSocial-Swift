@@ -25,6 +25,7 @@
 		84E4ABB8255A94EA0078A1CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E4ABB7255A94EA0078A1CA /* GoogleService-Info.plist */; };
 		A853B8BE2573184A008EB4AA /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A853B8BD2573184A008EB4AA /* CommentsViewController.swift */; };
 		A8DE78002574101D001446D4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE77FF2574101D001446D4 /* PostViewController.swift */; };
+		A8DE780325743C7A001446D4 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE780225743C7A001446D4 /* CommentsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		84E4ABB7255A94EA0078A1CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A853B8BD2573184A008EB4AA /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		A8DE77FF2574101D001446D4 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		A8DE780225743C7A001446D4 /* CommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				84E4ABB5255A8EA20078A1CA /* Utilities.swift */,
 				84DA71E9255AE2440072F3DB /* Constants.swift */,
 				848EB054255D710B009F4F2D /* TableViewCell.swift */,
+				A8DE780225743C7A001446D4 /* CommentsCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				84A495E5253569D200DBECCE /* SceneDelegate.swift in Sources */,
 				84E4ABB3255A87550078A1CA /* FeedViewController.swift in Sources */,
 				84DA71EA255AE2440072F3DB /* Constants.swift in Sources */,
+				A8DE780325743C7A001446D4 /* CommentsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

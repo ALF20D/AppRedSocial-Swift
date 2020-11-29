@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var PostButton: UIButton!
     
     var fixedposts : [Dictionary<String, AnyObject>] = []
+    var key_post : [String] = []
 
     @IBOutlet weak var TableView: UITableView!
     
@@ -23,12 +24,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.commentViewController) as? CommentsViewController
-        
-        self.navigationController?.pushViewController(vc!, animated: true)
-     
-        vc?.uid = fixedposts[indexPath.row]["owner_uid"] as! String
-        
-        print("selected")
+        vc?.modalPresentationStyle = .popover
+        vc?.uid = key_post[indexPath.row] as! String
+        self.present(vc!, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,10 +39,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
-        
         TableView.rowHeight = UITableView.automaticDimension
-        
-        
         loadFeed {
             self.TableView.reloadData()
         }
@@ -75,7 +70,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             {
                 self.fixedposts.removeAll()
             }
+            if self.key_post.count != 0
+            {
+                self.key_post.removeAll()
+            }
             for child in snapshot.children.allObjects as! [DataSnapshot] {
+                self.key_post.append(child.key)
              let dict = child.value as! Dictionary <String, AnyObject>
                 self.fixedposts.append(dict)
              }

@@ -59,7 +59,7 @@ class PostViewController: UIViewController {
                         self.FullName = (document.data()["nombre"] as! String) + " " + (document.data()["apellido"] as! String)
                         self.uid = (document.data()["uid"] as! String)
                     }
-
+         
                     let ref: DatabaseReference! = Database.database().reference()
                     ref.child("posts").childByAutoId().setValue(["comment": self.CommentPostTextField.text! as NSString, "full_name": self.FullName as NSString, "owner_uid": self.uid as NSString])
                }
