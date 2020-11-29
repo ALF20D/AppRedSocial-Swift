@@ -95,9 +95,9 @@ class SignUpViewController: UIViewController {
     
     func transitionToFeed() {
         
-        let feedViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? UITabBarController
-        view.window?.rootViewController = feedViewController
-        view.window?.makeKeyAndVisible()
+        let feed = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? FeedViewController
+
+        self.navigationController?.pushViewController(feed!, animated: true)
     }
     
     func monstrarError(_ msg: String)  {

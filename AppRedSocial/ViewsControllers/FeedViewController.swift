@@ -20,6 +20,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return self.fixedposts.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "test") as? CommentsViewController
+        
+        self.navigationController?.pushViewController(vc!, animated: true)
+     
+        vc?.uid = fixedposts[indexPath.row]["owner_uid"] as! String
+        
+        print("selected")
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellview", for: indexPath) as! TableViewCell
         cell.configure( comments: fixedposts[indexPath.row]["comment"] as! String, fullname: fixedposts[indexPath.row]["full_name"] as! String)

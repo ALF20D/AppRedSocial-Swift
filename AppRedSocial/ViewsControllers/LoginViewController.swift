@@ -83,9 +83,9 @@ class LoginViewController: UIViewController, UITabBarControllerDelegate {
                       self.ErrorLabel.alpha = 1
                   }
                   else {
-                      let feedViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? UITabBarController
-                      self.view.window?.rootViewController = feedViewController
-                      self.view.window?.makeKeyAndVisible()
+                    let feed = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.feedViewController) as? FeedViewController
+
+                    self.navigationController?.pushViewController(feed!, animated: true)
                   
                 }
               }
