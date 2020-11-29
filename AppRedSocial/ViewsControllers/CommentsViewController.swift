@@ -17,6 +17,8 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var cardTableView: UITableView!
     
     
+    @IBOutlet weak var CreateCommentButton: UIButton!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.fixedcomments.count
     }
@@ -31,6 +33,7 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Utilities.styleFilledButton(CreateCommentButton)
         print(uid)
         
         cardTableView.rowHeight = UITableView.automaticDimension

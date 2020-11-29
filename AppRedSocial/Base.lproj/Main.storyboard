@@ -402,7 +402,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d6a-g8-keC">
                                 <rect key="frame" x="37" y="133" width="339" height="181"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="181" id="NKF-iZ-Cbe"/>
                                 </constraints>
@@ -463,7 +463,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="250" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TNc-MZ-2VB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentsCell" id="4V9-3Z-XY7" customClass="CommentsCell" customModule="AppRedSocial" customModuleProvider="target">
@@ -523,23 +523,58 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                     <outlet property="delegate" destination="Ca4-Rn-TPx" id="CwF-4C-Krs"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zux-xP-Bvz" userLabel="Comment View">
+                                <rect key="frame" x="3" y="752" width="408" height="100"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-Kl-Uem">
+                                        <rect key="frame" x="25" y="17" width="327" height="69"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkk-BX-iBu">
+                                        <rect key="frame" x="368" y="29" width="30" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="ra7-sw-SkJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="+"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Fkk-BX-iBu" firstAttribute="top" secondItem="Zux-xP-Bvz" secondAttribute="top" constant="29" id="0ko-y2-2JT"/>
+                                    <constraint firstAttribute="bottom" secondItem="HoS-Kl-Uem" secondAttribute="bottom" constant="14" id="FbG-nt-Prk"/>
+                                    <constraint firstItem="HoS-Kl-Uem" firstAttribute="top" secondItem="Zux-xP-Bvz" secondAttribute="top" constant="17" id="gaZ-6T-Zip"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fkk-BX-iBu" secondAttribute="bottom" constant="26" id="k9W-3j-9n9"/>
+                                    <constraint firstItem="Fkk-BX-iBu" firstAttribute="leading" secondItem="HoS-Kl-Uem" secondAttribute="trailing" constant="16" id="oEJ-Uz-b8D"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fkk-BX-iBu" secondAttribute="trailing" constant="10" id="stn-6H-bcY"/>
+                                    <constraint firstItem="HoS-Kl-Uem" firstAttribute="leading" secondItem="Zux-xP-Bvz" secondAttribute="leading" constant="25" id="yTf-b0-5rt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IJK-0M-TTC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TNc-MZ-2VB" firstAttribute="leading" secondItem="IJK-0M-TTC" secondAttribute="leading" id="0VQ-cA-NM9"/>
-                            <constraint firstItem="IJK-0M-TTC" firstAttribute="bottom" secondItem="TNc-MZ-2VB" secondAttribute="bottom" id="b3d-GW-bjY"/>
+                            <constraint firstItem="IJK-0M-TTC" firstAttribute="trailing" secondItem="Zux-xP-Bvz" secondAttribute="trailing" constant="3" id="3Zy-ze-iYo"/>
+                            <constraint firstItem="Zux-xP-Bvz" firstAttribute="top" secondItem="TNc-MZ-2VB" secondAttribute="bottom" constant="30" id="Uph-31-jVL"/>
+                            <constraint firstItem="IJK-0M-TTC" firstAttribute="bottom" secondItem="TNc-MZ-2VB" secondAttribute="bottom" constant="140" id="b3d-GW-bjY"/>
                             <constraint firstItem="IJK-0M-TTC" firstAttribute="trailing" secondItem="TNc-MZ-2VB" secondAttribute="trailing" id="k4s-qD-lf1"/>
+                            <constraint firstItem="IJK-0M-TTC" firstAttribute="bottom" secondItem="Zux-xP-Bvz" secondAttribute="bottom" constant="10" id="lGa-yB-rZd"/>
                             <constraint firstItem="TNc-MZ-2VB" firstAttribute="top" secondItem="IJK-0M-TTC" secondAttribute="top" id="pAl-LX-vTn"/>
+                            <constraint firstItem="Zux-xP-Bvz" firstAttribute="leading" secondItem="IJK-0M-TTC" secondAttribute="leading" constant="3" id="vY6-4a-ZAH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CreateCommentButton" destination="Fkk-BX-iBu" id="ClK-EP-GdG"/>
                         <outlet property="cardTableView" destination="TNc-MZ-2VB" id="U7W-9U-NiW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUB-Ev-VWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5974" y="571"/>
+            <point key="canvasLocation" x="5973.913043478261" y="569.86607142857144"/>
         </scene>
         <!--Profile-->
         <scene sceneID="BCB-Zp-qbS">
@@ -612,11 +647,14 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pngegg" width="685" height="617"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
