@@ -51,18 +51,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func setUpElements(){
-        
-        // Aplicar estilos a los elementos
         Utilities.styleFilledButton(PostButton)
-        
     }
     
     
     @IBAction func PostClick(_ sender: Any) {
         
         let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.postViewController) as? PostViewController
-        
-        self.navigationController?.pushViewController(vc!, animated: true)
+        vc?.modalPresentationStyle = .popover
+        self.present(vc!, animated: true, completion: nil)
+       // self.navigationController?.pushViewController(vc!, animated: true)
         
     
     }
