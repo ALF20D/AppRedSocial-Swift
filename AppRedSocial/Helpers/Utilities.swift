@@ -28,6 +28,11 @@ class Utilities {
         
     }
     
+    static func styleUITextField(_ textfield: UITextView)
+    {
+        
+    }
+    
     static func styleFilledButton(_ button:UIButton) {
         
         // Filled rounded corner style
@@ -35,6 +40,7 @@ class Utilities {
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.white
     }
+    
     
     static func styleHollowButton(_ button:UIButton) {
         

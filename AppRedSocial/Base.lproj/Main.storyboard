@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c0N-lv-9Lq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UxM-6v-Mdd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -392,25 +392,72 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
             </objects>
             <point key="canvasLocation" x="4962.3188405797109" y="875.89285714285711"/>
         </scene>
-        <!--Post View Controller-->
+        <!--Post-->
         <scene sceneID="C7W-Bh-ISU">
             <objects>
-                <viewController storyboardIdentifier="PostVC" id="VEJ-ZD-k6W" customClass="PostViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostVC" title="Post" id="VEJ-ZD-k6W" customClass="PostViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gJN-yt-I67">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d6a-g8-keC">
+                                <rect key="frame" x="37" y="133" width="339" height="181"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="NKF-iZ-Cbe"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAW-dR-P6P">
+                                <rect key="frame" x="159" y="355" width="96" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="3kV-0R-phj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="PostClick:" destination="VEJ-ZD-k6W" eventType="touchUpInside" id="DoX-d5-B7k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realizar comentario..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N70-5H-JZd">
+                                <rect key="frame" x="37" y="92" width="277" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="haA-th-WJg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SAW-dR-P6P" firstAttribute="leading" secondItem="haA-th-WJg" secondAttribute="leading" constant="159" id="4IF-M0-Cwr"/>
+                            <constraint firstItem="N70-5H-JZd" firstAttribute="top" secondItem="haA-th-WJg" secondAttribute="top" constant="48" id="64B-Tk-d8x"/>
+                            <constraint firstItem="N70-5H-JZd" firstAttribute="leading" secondItem="haA-th-WJg" secondAttribute="leading" constant="37" id="EhQ-Q6-DPi"/>
+                            <constraint firstItem="d6a-g8-keC" firstAttribute="top" secondItem="haA-th-WJg" secondAttribute="top" constant="89" id="IYA-h8-f3u"/>
+                            <constraint firstItem="d6a-g8-keC" firstAttribute="leading" secondItem="haA-th-WJg" secondAttribute="leading" constant="37" id="PoO-zG-ctz"/>
+                            <constraint firstItem="SAW-dR-P6P" firstAttribute="top" secondItem="d6a-g8-keC" secondAttribute="bottom" constant="41" id="Pwp-mJ-LOm"/>
+                            <constraint firstItem="haA-th-WJg" firstAttribute="trailing" secondItem="SAW-dR-P6P" secondAttribute="trailing" constant="159" id="Uey-MY-A1b"/>
+                            <constraint firstItem="haA-th-WJg" firstAttribute="bottom" secondItem="d6a-g8-keC" secondAttribute="bottom" constant="548" id="e3q-Ua-dgY"/>
+                            <constraint firstItem="haA-th-WJg" firstAttribute="bottom" secondItem="SAW-dR-P6P" secondAttribute="bottom" constant="464" id="fHg-ny-fRf"/>
+                            <constraint firstItem="haA-th-WJg" firstAttribute="trailing" secondItem="d6a-g8-keC" secondAttribute="trailing" constant="38" id="hA7-8S-pfO"/>
+                            <constraint firstItem="haA-th-WJg" firstAttribute="trailing" secondItem="N70-5H-JZd" secondAttribute="trailing" constant="100" id="hZn-1w-hgJ"/>
+                            <constraint firstItem="d6a-g8-keC" firstAttribute="top" secondItem="N70-5H-JZd" secondAttribute="bottom" constant="20" id="mRL-oa-M9u"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CommentPostTextField" destination="d6a-g8-keC" id="w74-Ia-Fyz"/>
+                        <outlet property="PostButton" destination="SAW-dR-P6P" id="O2g-0F-pQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yt-3d-LKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5900" y="523"/>
+            <point key="canvasLocation" x="5898.5507246376819" y="522.99107142857144"/>
         </scene>
-        <!--Comments View Controller-->
+        <!--Comments-->
         <scene sceneID="LPb-ea-qa1">
             <objects>
-                <viewController storyboardIdentifier="CommentVC" id="Ca4-Rn-TPx" customClass="CommentsViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentVC" title="Comments" id="Ca4-Rn-TPx" customClass="CommentsViewController" customModule="AppRedSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XE3-Wy-pVk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,6 +542,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
         <image name="pngegg" width="685" height="617"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
