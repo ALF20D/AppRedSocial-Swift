@@ -14,9 +14,10 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     var fixedcomments : [Dictionary<String, AnyObject>] = []
     
     var uid = ""
+    
+    
     @IBOutlet weak var cardTableView: UITableView!
-    
-    
+    @IBOutlet weak var commentTextField: UITextView!
     @IBOutlet weak var CreateCommentButton: UIButton!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,13 +36,27 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         Utilities.styleFilledButton(CreateCommentButton)
         print(uid)
-        
         cardTableView.rowHeight = UITableView.automaticDimension
         loadFeed {
             self.cardTableView.reloadData()
         }
         
 
+    }
+    
+    
+    @IBAction func commentClick(_ sender: Any) {
+        
+        if(commentTextField.text.count < 3)
+       {
+        let alert = UIAlertController(title: "Error", message: "Por favor, ingresar por lo menos 3 letras.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+       }
+        else
+       {
+        
+       }
     }
     
     func loadFeed( completion:  @escaping () -> Void ) {

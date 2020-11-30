@@ -400,7 +400,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d6a-g8-keC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="d6a-g8-keC">
                                 <rect key="frame" x="37" y="133" width="339" height="181"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
@@ -427,32 +427,43 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvw-x0-6uH">
+                                <rect key="frame" x="10" y="455" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="haA-th-WJg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SAW-dR-P6P" firstAttribute="leading" secondItem="haA-th-WJg" secondAttribute="leading" constant="159" id="4IF-M0-Cwr"/>
                             <constraint firstItem="N70-5H-JZd" firstAttribute="top" secondItem="haA-th-WJg" secondAttribute="top" constant="48" id="64B-Tk-d8x"/>
+                            <constraint firstItem="haA-th-WJg" firstAttribute="bottom" secondItem="Qvw-x0-6uH" secondAttribute="bottom" constant="386" id="CqM-m0-GuV"/>
                             <constraint firstItem="N70-5H-JZd" firstAttribute="leading" secondItem="haA-th-WJg" secondAttribute="leading" constant="37" id="EhQ-Q6-DPi"/>
+                            <constraint firstItem="Qvw-x0-6uH" firstAttribute="leading" secondItem="haA-th-WJg" secondAttribute="leading" constant="10" id="FDc-ej-qql"/>
                             <constraint firstItem="d6a-g8-keC" firstAttribute="top" secondItem="haA-th-WJg" secondAttribute="top" constant="89" id="IYA-h8-f3u"/>
                             <constraint firstItem="d6a-g8-keC" firstAttribute="leading" secondItem="haA-th-WJg" secondAttribute="leading" constant="37" id="PoO-zG-ctz"/>
                             <constraint firstItem="SAW-dR-P6P" firstAttribute="top" secondItem="d6a-g8-keC" secondAttribute="bottom" constant="41" id="Pwp-mJ-LOm"/>
+                            <constraint firstItem="Qvw-x0-6uH" firstAttribute="top" secondItem="d6a-g8-keC" secondAttribute="bottom" constant="141" id="Rxa-hc-dnK"/>
                             <constraint firstItem="haA-th-WJg" firstAttribute="trailing" secondItem="SAW-dR-P6P" secondAttribute="trailing" constant="159" id="Uey-MY-A1b"/>
                             <constraint firstItem="haA-th-WJg" firstAttribute="bottom" secondItem="d6a-g8-keC" secondAttribute="bottom" constant="548" id="e3q-Ua-dgY"/>
                             <constraint firstItem="haA-th-WJg" firstAttribute="bottom" secondItem="SAW-dR-P6P" secondAttribute="bottom" constant="464" id="fHg-ny-fRf"/>
                             <constraint firstItem="haA-th-WJg" firstAttribute="trailing" secondItem="d6a-g8-keC" secondAttribute="trailing" constant="38" id="hA7-8S-pfO"/>
                             <constraint firstItem="haA-th-WJg" firstAttribute="trailing" secondItem="N70-5H-JZd" secondAttribute="trailing" constant="100" id="hZn-1w-hgJ"/>
                             <constraint firstItem="d6a-g8-keC" firstAttribute="top" secondItem="N70-5H-JZd" secondAttribute="bottom" constant="20" id="mRL-oa-M9u"/>
+                            <constraint firstItem="haA-th-WJg" firstAttribute="trailing" secondItem="Qvw-x0-6uH" secondAttribute="trailing" constant="10" id="vlV-ue-4d1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="CommentPostTextField" destination="d6a-g8-keC" id="w74-Ia-Fyz"/>
                         <outlet property="PostButton" destination="SAW-dR-P6P" id="O2g-0F-pQc"/>
+                        <outlet property="labelError" destination="Qvw-x0-6uH" id="Pyd-Vd-ujC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yt-3d-LKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5974" y="-269"/>
+            <point key="canvasLocation" x="5973.913043478261" y="-269.19642857142856"/>
         </scene>
         <!--Comments-->
         <scene sceneID="LPb-ea-qa1">
@@ -526,10 +537,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zux-xP-Bvz" userLabel="Comment View">
                                 <rect key="frame" x="3" y="752" width="408" height="100"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-Kl-Uem">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoS-Kl-Uem">
                                         <rect key="frame" x="25" y="17" width="327" height="69"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -541,6 +551,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="commentClick:" destination="Ca4-Rn-TPx" eventType="touchUpInside" id="bJE-Cl-TN3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -570,6 +583,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                     <connections>
                         <outlet property="CreateCommentButton" destination="Fkk-BX-iBu" id="ClK-EP-GdG"/>
                         <outlet property="cardTableView" destination="TNc-MZ-2VB" id="U7W-9U-NiW"/>
+                        <outlet property="commentTextField" destination="HoS-Kl-Uem" id="fsg-Rk-RGZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUB-Ev-VWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

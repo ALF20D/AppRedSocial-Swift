@@ -12,6 +12,7 @@ import Firebase
 class PostViewController: UIViewController {
     
    
+    @IBOutlet weak var labelError: UILabel!
     var FullName : String = ""
     var uid : String = ""
     
@@ -24,6 +25,7 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelError.alpha = 0
         setUpElements()
         
         // Do any additional setup after loading the view.
@@ -35,8 +37,20 @@ class PostViewController: UIViewController {
     }
 
     @IBAction func PostClick(_ sender: Any) {
-        postComment()
-        dismiss(animated: true, completion: nil)
+        
+        if(CommentPostTextField.text.count < 3)
+        {
+            labelError.alpha = 1
+            labelError.text = "Ingresar por lo menos 3 letras."
+           
+        }
+        else
+        {
+            labelError.alpha = 0
+            postComment()
+            dismiss(animated: true, completion: nil)
+        }
+        
     }
     
     
