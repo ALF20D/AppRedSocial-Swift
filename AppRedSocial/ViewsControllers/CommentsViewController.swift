@@ -34,7 +34,7 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Utilities.styleFilledButton(CreateCommentButton)
+        
         print(uid)
         cardTableView.rowHeight = UITableView.automaticDimension
         loadFeed {

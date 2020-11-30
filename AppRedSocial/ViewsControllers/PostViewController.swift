@@ -11,14 +11,10 @@ import Firebase
 
 class PostViewController: UIViewController {
     
-   
     @IBOutlet weak var labelError: UILabel!
     var FullName : String = ""
     var uid : String = ""
-    
     @IBOutlet weak var PostButton: UIButton!
-    
-    
     @IBOutlet weak var CommentPostTextField: UITextView!
     
     
@@ -27,12 +23,9 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         labelError.alpha = 0
         setUpElements()
-        
-        // Do any additional setup after loading the view.
     }
     
     func setUpElements(){
-        Utilities.styleHollowButton(PostButton)
         Utilities.styleUITextField(CommentPostTextField)
     }
 

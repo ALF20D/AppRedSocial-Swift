@@ -25,7 +25,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.commentViewController) as? CommentsViewController
         vc?.modalPresentationStyle = .popover
-        vc?.uid = key_post[indexPath.row] as! String
+        vc?.uid = key_post[indexPath.row] 
         self.present(vc!, animated: true, completion: nil)
     }
     
@@ -38,15 +38,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpElements()
         TableView.rowHeight = UITableView.automaticDimension
         loadFeed {
             self.TableView.reloadData()
         }
-    }
-    
-    func setUpElements(){
-        Utilities.styleFilledButton(PostButton)
     }
     
     
