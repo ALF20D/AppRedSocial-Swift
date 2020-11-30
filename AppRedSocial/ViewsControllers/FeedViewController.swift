@@ -24,6 +24,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.commentViewController) as? CommentsViewController
+        
         vc?.modalPresentationStyle = .popover
         vc?.uid = key_post[indexPath.row] 
         self.present(vc!, animated: true, completion: nil)
@@ -31,7 +32,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellview", for: indexPath) as! TableViewCell
-        cell.configure( comments: fixedposts[indexPath.row]["comment"] as! String, fullname: fixedposts[indexPath.row]["full_name"] as! String)
+   
+ 
+        loadLikes(key: key_post[indexPath.row])
+        
+        cell.configure( comments: fixedposts[indexPath.row]["comment"] as! String, fullname: fixedposts[indexPath.row]["full_name"] as! String, quantity: "2")
         return cell
     }
     
@@ -50,11 +55,25 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.postViewController) as? PostViewController
         vc?.modalPresentationStyle = .popover
         self.present(vc!, animated: true, completion: nil)
-       // self.navigationController?.pushViewController(vc!, animated: true)
-        
-    
     }
     
+    
+    func loadLikes (key: String)
+        {
+            let ref = Database.database().reference().child("likes")
+            ref.queryOrdered(byChild: "post_uid").queryEqual(toValue: key)
+                .observe(DataEventType.value) {(snapshot) in
+                    let dict: NSDictionary = snapshot.value as! NSDictionary
+                    for unit in dict
+                    {
+                        let obj = unit.value as! NSDictionary
+                        let quantity = obj.value(forKey: "quantity")
+                        print(quantity)
+                    }
+                    
+                }
+        }
+
     
     func loadFeed( completion:  @escaping () -> Void ) {
         
@@ -74,11 +93,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
              let dict = child.value as! Dictionary <String, AnyObject>
                 self.fixedposts.append(dict)
              }
-            //print("------------------")
-            //print(self.fixedposts)
             self.TableView.reloadData()
             completion()
-            
         }
     }
 }

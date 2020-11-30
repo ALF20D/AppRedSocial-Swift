@@ -10,9 +10,8 @@ import UIKit
 import Firebase
 
 class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+
     var fixedcomments : [Dictionary<String, AnyObject>] = []
-    
     var uid = ""
     var FullName : String = ""
     
@@ -34,14 +33,10 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(uid)
         cardTableView.rowHeight = UITableView.automaticDimension
         loadFeed {
             self.cardTableView.reloadData()
         }
-        
-
     }
     
     
@@ -62,9 +57,7 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     func postUnitComment()
     {
      Auth.auth().addStateDidChangeListener { (auth, user) in
-         
          if(user != nil)
-             
                 {
                  
                 Firestore.firestore().collection("users")
@@ -91,7 +84,6 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func loadFeed( completion:  @escaping () -> Void ) {
-            
             let ref : DatabaseReference!
             ref = Database.database().reference().child("comments")
             ref.queryOrdered(byChild: "post_uid").queryEqual(toValue: uid)
@@ -104,12 +96,9 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
                  let dict = child.value as! Dictionary <String, AnyObject>
                     self.fixedcomments.append(dict)
                  }
-                print(self.fixedcomments)
                 self.cardTableView.reloadData()
                 completion()
                 
             }
         }
-    
-
 }

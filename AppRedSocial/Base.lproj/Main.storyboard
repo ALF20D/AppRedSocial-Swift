@@ -352,7 +352,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX9-qL-EMn">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX9-qL-EMn">
                                                             <rect key="frame" x="101.5" y="236.5" width="10.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -391,6 +391,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                             <outlet property="CellView" destination="lyz-WA-YdX" id="zYa-Yn-WhS"/>
                                             <outlet property="PostLabel" destination="Lc3-9i-zO6" id="eOs-xW-eee"/>
                                             <outlet property="ownerLabel" destination="59L-JC-nIk" id="cdH-RN-mCo"/>
+                                            <outlet property="quantityLikesLabel" destination="hX9-qL-EMn" id="mc1-fA-F41"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
