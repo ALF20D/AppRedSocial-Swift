@@ -14,7 +14,7 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     var fixedcomments : [Dictionary<String, AnyObject>] = []
     
     var uid = ""
-    
+    var FullName : String = ""
     
     @IBOutlet weak var cardTableView: UITableView!
     @IBOutlet weak var commentTextField: UITextView!
@@ -55,9 +55,40 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
        }
         else
        {
-        
+        postUnitComment ()
        }
     }
+    
+    func postUnitComment()
+    {
+     Auth.auth().addStateDidChangeListener { (auth, user) in
+         
+         if(user != nil)
+             
+                {
+                 
+                Firestore.firestore().collection("users")
+                 .whereField("uid", isEqualTo: auth.currentUser?.uid as Any)
+                  .getDocuments { (querySnapshot, err) in
+                         if err != nil {
+                             print("Ocurrió un error.")
+                         }
+                     
+                     for document in querySnapshot!.documents {
+                        self.FullName = (document.data()["nombre"] as! String) + " " + (document.data()["apellido"] as! String)
+                     }
+          
+                     let ref: DatabaseReference! = Database.database().reference()
+                     ref.child("comments").childByAutoId().setValue(["comment": self.commentTextField.text! as NSString, "full_name": self.FullName as NSString, "post_uid": self.uid as NSString])
+                    if(self.commentTextField.text.count > 1)
+                    {
+                        self.commentTextField.text = ""
+                    }
+                }
+             }
+        }
+    }
+    
     
     func loadFeed( completion:  @escaping () -> Void ) {
             
