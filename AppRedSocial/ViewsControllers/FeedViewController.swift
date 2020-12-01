@@ -64,7 +64,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let indexPost: Int = indexPath![1] as Int
         //print(self.key_post[indexPost])
         
-        Database.database().reference().child("posts").child(self.key_post[indexPost]).updateChildValues(["likes" : ["quantity":50]])
+        Database.database().reference().child("posts").child(self.key_post[indexPost]).updateChildValues(["likes" : ["quantity":6]])
     }
     
     
