@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var PostButton: UIButton!
     
     var fixedposts : [Dictionary<String, AnyObject>] = []
+    var likes_post : [Int] = []
     var key_post : [String] = []
 
     @IBOutlet weak var TableView: UITableView!
@@ -32,11 +33,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellview", for: indexPath) as! TableViewCell
-   
- 
-        loadLikes(key: key_post[indexPath.row])
         
-        cell.configure( comments: fixedposts[indexPath.row]["comment"] as! String, fullname: fixedposts[indexPath.row]["full_name"] as! String, quantity: "2")
+        let fxposts = fixedposts[indexPath.row]["comment"] as! String
+        let fxfullname = fixedposts[indexPath.row]["full_name"] as! String
+        let quantityLikes = self.fixedposts[indexPath.row]["likes"] as! NSDictionary
+        let resultLikes: Int = quantityLikes.value(forKey: "quantity") as! Int
+        
+        cell.configure(comments: fxposts, fullname: fxfullname, quantity: resultLikes)
+        
         return cell
     }
     
@@ -47,6 +51,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadFeed {
             self.TableView.reloadData()
         }
+        
+        
     }
     
     
@@ -58,21 +64,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    func loadLikes (key: String)
-        {
-            let ref = Database.database().reference().child("likes")
-            ref.queryOrdered(byChild: "post_uid").queryEqual(toValue: key)
-                .observe(DataEventType.value) {(snapshot) in
-                    let dict: NSDictionary = snapshot.value as! NSDictionary
-                    for unit in dict
-                    {
-                        let obj = unit.value as! NSDictionary
-                        let quantity = obj.value(forKey: "quantity")
-                        print(quantity)
-                    }
-                    
-                }
-        }
+
+    
 
     
     func loadFeed( completion:  @escaping () -> Void ) {

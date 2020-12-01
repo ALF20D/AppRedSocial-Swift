@@ -18,11 +18,11 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var CellView: UIView!
     
     
-    func configure(comments: String, fullname: String, quantity: String)
+    func configure(comments: String, fullname: String, quantity: Int)
     {
         ownerLabel.text = fullname
         PostLabel.text = comments
-        quantityLikesLabel.text = quantity
+        quantityLikesLabel.text = String(quantity)
         CellView.layer.shadowColor = UIColor.gray.cgColor
         CellView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         CellView.layer.shadowOpacity = 1.0
