@@ -13,8 +13,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var PostButton: UIButton!
     
+   
+    
     var fixedposts : [Dictionary<String, AnyObject>] = []
-    var likes_post : [Int] = []
     var key_post : [String] = []
 
     @IBOutlet weak var TableView: UITableView!
