@@ -342,6 +342,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lb4-zi-iuq">
                                                             <rect key="frame" x="128" y="275" width="78" height="24"/>
                                                             <state key="normal" title="Button" image="thumb_up_alt-24px-2"/>
+                                                            <connections>
+                                                                <action selector="LikeClickButton:" destination="7tG-d5-t1I" eventType="touchUpInside" id="2ZU-HH-fi6"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwZ-HY-3fH">
                                                             <rect key="frame" x="40" y="236" width="48" height="21"/>

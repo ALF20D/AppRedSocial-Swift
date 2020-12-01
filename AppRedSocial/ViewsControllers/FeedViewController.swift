@@ -57,6 +57,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    
+    @IBAction func LikeClickButton(_ sender: Any) {
+        
+    }
+    
+    
     @IBAction func PostClick(_ sender: Any) {
         
         let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.postViewController) as? PostViewController
