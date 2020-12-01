@@ -58,7 +58,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    @IBAction func LikeClickButton(_ sender: Any) {
+    @IBAction func LikeClickButton(_ sender: AnyObject) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.TableView)
+           let indexPath = self.TableView.indexPathForRow(at: buttonPosition)
+        let indexPost: Int = indexPath![1] as Int
         
     }
     
