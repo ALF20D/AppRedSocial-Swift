@@ -64,10 +64,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-
-    
-
-    
     func loadFeed( completion:  @escaping () -> Void ) {
         
         var ref: DatabaseReference!
