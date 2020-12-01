@@ -347,38 +347,38 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwZ-HY-3fH">
-                                                            <rect key="frame" x="40" y="236" width="48" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="RQX-8V-oHu"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="10" y="236" width="48" height="21"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hX9-qL-EMn">
-                                                            <rect key="frame" x="98.5" y="236.5" width="13.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="74" y="235.5" width="70" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="70" id="YgR-mR-wFU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="hX9-qL-EMn" secondAttribute="trailing" constant="300" id="06h-1o-5Xw"/>
-                                                        <constraint firstItem="Lb4-zi-iuq" firstAttribute="top" secondItem="hX9-qL-EMn" secondAttribute="bottom" constant="18" id="7tk-z3-PKC"/>
                                                         <constraint firstItem="Lc3-9i-zO6" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="15" id="9X0-SH-M0Z"/>
-                                                        <constraint firstItem="hX9-qL-EMn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BwZ-HY-3fH" secondAttribute="trailing" constant="8" symbolic="YES" id="EVj-Mu-8zL"/>
+                                                        <constraint firstItem="Lb4-zi-iuq" firstAttribute="top" secondItem="hX9-qL-EMn" secondAttribute="bottom" constant="19" id="9Xg-5S-7Xz"/>
                                                         <constraint firstItem="59L-JC-nIk" firstAttribute="top" secondItem="4Fg-lL-UUI" secondAttribute="top" constant="8" id="Eqw-L6-mu4"/>
-                                                        <constraint firstAttribute="bottom" secondItem="BwZ-HY-3fH" secondAttribute="bottom" constant="61" id="Gu8-ba-LhI"/>
+                                                        <constraint firstItem="hX9-qL-EMn" firstAttribute="leading" secondItem="BwZ-HY-3fH" secondAttribute="trailing" constant="16" id="FM7-qn-O4e"/>
+                                                        <constraint firstItem="hX9-qL-EMn" firstAttribute="top" secondItem="Lc3-9i-zO6" secondAttribute="bottom" constant="7.5" id="R42-lc-PcN"/>
                                                         <constraint firstAttribute="trailing" secondItem="59L-JC-nIk" secondAttribute="trailing" constant="15" id="R4h-kG-fRx"/>
-                                                        <constraint firstItem="hX9-qL-EMn" firstAttribute="top" secondItem="Lc3-9i-zO6" secondAttribute="bottom" constant="8.5" id="RmV-od-bK6"/>
                                                         <constraint firstAttribute="bottom" secondItem="Lb4-zi-iuq" secondAttribute="bottom" constant="19" id="Y6J-sU-5Ix"/>
                                                         <constraint firstAttribute="trailing" secondItem="Lc3-9i-zO6" secondAttribute="trailing" constant="15" id="Y9X-Sx-jpk"/>
-                                                        <constraint firstItem="BwZ-HY-3fH" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="40" id="bl6-JM-rWK"/>
+                                                        <constraint firstItem="BwZ-HY-3fH" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="10" id="dZc-LH-pBf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BwZ-HY-3fH" secondAttribute="bottom" constant="61" id="m7s-KR-AI7"/>
                                                         <constraint firstAttribute="bottom" secondItem="Lc3-9i-zO6" secondAttribute="bottom" constant="90" id="p5r-Yx-ZJa"/>
                                                         <constraint firstItem="Lb4-zi-iuq" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="128" id="qC5-HI-Twu"/>
                                                         <constraint firstItem="59L-JC-nIk" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="15" id="tQ3-e3-2xN"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lb4-zi-iuq" secondAttribute="trailing" constant="20" symbolic="YES" id="var-bJ-HUM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hX9-qL-EMn" secondAttribute="trailing" constant="268" id="vhH-SK-7km"/>
                                                         <constraint firstItem="Lc3-9i-zO6" firstAttribute="top" secondItem="59L-JC-nIk" secondAttribute="bottom" constant="10" id="wA1-GG-bQo"/>
                                                     </constraints>
                                                 </view>
@@ -453,7 +453,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realizar comentario..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N70-5H-JZd">
                                 <rect key="frame" x="37" y="92" width="277" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
