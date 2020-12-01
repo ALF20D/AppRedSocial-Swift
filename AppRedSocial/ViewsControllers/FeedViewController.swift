@@ -62,7 +62,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.TableView)
            let indexPath = self.TableView.indexPathForRow(at: buttonPosition)
         let indexPost: Int = indexPath![1] as Int
+        //print(self.key_post[indexPost])
         
+        Database.database().reference().child("posts").child(self.key_post[indexPost]).updateChildValues(["likes" : ["quantity":50]])
     }
     
     
