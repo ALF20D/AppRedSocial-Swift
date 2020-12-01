@@ -60,11 +60,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func LikeClickButton(_ sender: AnyObject) {
         let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.TableView)
-           let indexPath = self.TableView.indexPathForRow(at: buttonPosition)
+        let indexPath = self.TableView.indexPathForRow(at: buttonPosition)
         let indexPost: Int = indexPath![1] as Int
-        //print(self.key_post[indexPost])
+ 
         
-        Database.database().reference().child("posts").child(self.key_post[indexPost]).updateChildValues(["likes" : ["quantity":6]])
+        Database.database().reference().child("posts").child(self.key_post[indexPost]).updateChildValues(["likes" : ["quantity":ServerValue.increment(1)]])
     }
     
     
