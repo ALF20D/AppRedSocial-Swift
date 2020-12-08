@@ -64,7 +64,6 @@ class ProfileViewController: UIViewController {
         
         // Update Firestore document...
         Auth.auth().addStateDidChangeListener { (auth, user) in
-            let user_uid = auth.currentUser!.uid
             let dbRef = Firestore.firestore().collection("users").document(self.documentId)
             dbRef.updateData(["nombre" : self.nombreTextField.text!, "apellido" : self.apellidoTextField.text!])
         }
