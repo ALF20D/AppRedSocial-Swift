@@ -323,6 +323,9 @@
                                             <state key="normal" title="Publicaciones" image="comment-black-24dp">
                                                 <color key="titleColor" systemColor="labelColor"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="ZAs-TB-bRP" kind="show" id="R70-iI-CXj"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -399,6 +402,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                                 <constraint firstAttribute="width" constant="24" id="PEE-rD-P8W"/>
                                                             </constraints>
                                                             <state key="normal" image="delete-black-24dp"/>
+                                                            <connections>
+                                                                <action selector="BorrarPublicacionClick:" destination="7tG-d5-t1I" eventType="touchUpInside" id="aem-Bz-NGW"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtz-mw-GGa">
                                                             <rect key="frame" x="311" y="286" width="76" height="24"/>
@@ -548,6 +554,22 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yt-3d-LKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5973.913043478261" y="-269.19642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ClR-mK-FKv">
+            <objects>
+                <viewController id="ZAs-TB-bRP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOh-1d-kdy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="idh-79-cxv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2QQ-5T-p8f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBd-J4-gBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4853" y="774"/>
         </scene>
         <!--Comments-->
         <scene sceneID="LPb-ea-qa1">

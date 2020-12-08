@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var PostButton: UIButton!
     
    
+
     
     var fixedposts : [Dictionary<String, AnyObject>] = []
     var key_post : [String] = []
@@ -62,8 +63,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.TableView)
         let indexPath = self.TableView.indexPathForRow(at: buttonPosition)
         let indexPost: Int = indexPath![1] as Int
- 
-        
         Database.database().reference().child("posts").child(self.key_post[indexPost]).updateChildValues(["likes" : ["quantity":ServerValue.increment(1)]])
     }
     
@@ -97,5 +96,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.TableView.reloadData()
             completion()
         }
+    }
+    
+    
+    @IBAction func BorrarPublicacionClick(_ sender: AnyObject) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.TableView)
+        let indexPath = self.TableView.indexPathForRow(at: buttonPosition)
+        let indexPost: Int = indexPath![1] as Int
+        Database.database().reference().child("posts").child(self.key_post[indexPost]).removeValue()
     }
 }
