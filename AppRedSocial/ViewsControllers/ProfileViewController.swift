@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
+    var documentId: String = ""
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var apellidoTextField: UITextField!
     @IBOutlet weak var EditNombreButton: UIButton!
@@ -22,13 +23,16 @@ class ProfileViewController: UIViewController {
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if(user != nil)
                    {
-                   Firestore.firestore().collection("users")
+                Firestore.firestore().collection("users")
+                    
                     .whereField("uid", isEqualTo: auth.currentUser?.uid as Any)
+                    
                      .getDocuments { (querySnapshot, err) in
                             if err != nil {
                                 print("Ocurrió un error.")
                             }
                             for document in querySnapshot!.documents {
+                                self.documentId = document.documentID
                                 self.nombreTextField.text = document.data()["nombre"] as? String
                                 self.apellidoTextField.text = document.data()["apellido"] as? String
                             }
@@ -57,6 +61,13 @@ class ProfileViewController: UIViewController {
         GuardarButton.alpha = 0
         nombreTextField.isUserInteractionEnabled = false
         apellidoTextField.isUserInteractionEnabled = false
+        
+        // Update Firestore document...
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            let user_uid = auth.currentUser!.uid
+            let dbRef = Firestore.firestore().collection("users").document(self.documentId)
+            dbRef.updateData(["nombre" : self.nombreTextField.text!, "apellido" : self.apellidoTextField.text!])
+        }
     }
     
     func setupElements()
