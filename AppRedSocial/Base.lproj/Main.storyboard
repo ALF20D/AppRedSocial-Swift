@@ -865,6 +865,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiq-Kf-HhR">
                                             <rect key="frame" x="324" y="5" width="61" height="49"/>
                                             <state key="normal" title="+" image="add_circle-24px"/>
+                                            <connections>
+                                                <action selector="NewPostClick:" destination="4m7-gh-Fis" eventType="touchUpInside" id="FbQ-BK-G1R"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -908,6 +911,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHZ-gD-DIO">
                                                             <rect key="frame" x="128" y="275" width="78" height="24"/>
                                                             <state key="normal" title="Button" image="thumb_up_alt-24px-2"/>
+                                                            <connections>
+                                                                <action selector="LikeClick:" destination="4m7-gh-Fis" eventType="touchUpInside" id="JgA-0I-eOD"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUd-EM-e4F">
                                                             <rect key="frame" x="10" y="236" width="48" height="21"/>
@@ -927,6 +933,9 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIM-y1-eJ5">
                                                             <rect key="frame" x="329" y="236" width="24" height="24"/>
                                                             <state key="normal" image="delete-black-24dp"/>
+                                                            <connections>
+                                                                <action selector="DeletePostClick:" destination="4m7-gh-Fis" eventType="touchUpInside" id="ZsF-cs-pxG"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

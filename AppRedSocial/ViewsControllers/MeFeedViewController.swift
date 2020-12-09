@@ -51,7 +51,6 @@ class MeFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.tableView.rowHeight = UITableView.automaticDimension
             self.loadFeed {
                 self.tableView.reloadData()
-                print(self.fixedposts)
             }
         }
     }
@@ -80,6 +79,29 @@ class MeFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.tableView.reloadData()
             completion()
         }
+    }
+    
+    
+    @IBAction func NewPostClick(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.postViewController) as? PostViewController
+        vc?.modalPresentationStyle = .popover
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func LikeClick(_ sender: AnyObject) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: buttonPosition)
+        let indexPost: Int = indexPath![1] as Int
+        Database.database().reference().child("posts").child(self.key_post[indexPost]).updateChildValues(["likes" : ["quantity":ServerValue.increment(1)]])
+    }
+    
+    
+    @IBAction func DeletePostClick(_ sender: AnyObject) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableView)
+        let indexPath = self.tableView.indexPathForRow(at: buttonPosition)
+        let indexPost: Int = indexPath![1] as Int
+        Database.database().reference().child("posts").child(self.key_post[indexPost]).removeValue()
     }
     
 }
