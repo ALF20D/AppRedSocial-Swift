@@ -55,24 +55,20 @@ class PostViewController: UIViewController {
             
                {
                 
-               Firestore.firestore().collection("users")
-                .whereField("uid", isEqualTo: auth.currentUser?.uid as Any)
-                 .getDocuments { (querySnapshot, err) in
-                        if err != nil {
-                            print("Ocurrió un error.")
-                        }
+        let ref = Database.database().reference()
+            ref.child("users").child(auth.currentUser!.uid)
+                .observeSingleEvent(of: DataEventType.value) { (DataSnapshot) in
+                    let dict = DataSnapshot.value as? NSDictionary
+                    self.FullName = (dict?.value(forKeyPath: "nombre") as! String) + " " + (dict?.value(forKeyPath: "apellido") as! String)
+                    self.uid = auth.currentUser!.uid
                     
-                    for document in querySnapshot!.documents {
-                        self.FullName = (document.data()["nombre"] as! String) + " " + (document.data()["apellido"] as! String)
-                        self.uid = (document.data()["uid"] as! String)
-                    }
-         
                     let ref: DatabaseReference! = Database.database().reference()
                     ref.child("posts").childByAutoId().setValue(["comment": self.CommentPostTextField.text! as NSString, "full_name": self.FullName as NSString, "owner_uid": self.uid as NSString, "likes": ["quantity":0] as NSDictionary])
-               }
+                }
+               
+               
             }
-       }
-   }
+        }
     
-
+ }
 }

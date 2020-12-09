@@ -60,23 +60,18 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
          if(user != nil)
                 {
                  
-                Firestore.firestore().collection("users")
-                 .whereField("uid", isEqualTo: auth.currentUser?.uid as Any)
-                  .getDocuments { (querySnapshot, err) in
-                         if err != nil {
-                             print("Ocurrió un error.")
-                         }
-                     
-                     for document in querySnapshot!.documents {
-                        self.FullName = (document.data()["nombre"] as! String) + " " + (document.data()["apellido"] as! String)
-                     }
-          
-                     let ref: DatabaseReference! = Database.database().reference()
-                     ref.child("comments").childByAutoId().setValue(["comment": self.commentTextField.text! as NSString, "full_name": self.FullName as NSString, "post_uid": self.uid as NSString])
+            let ref = Database.database().reference()
+            ref.child("users").child(auth.currentUser!.uid)
+                .observeSingleEvent(of: DataEventType.value) { (DataSnapshot) in
+                      let dict = DataSnapshot.value as! NSDictionary
+                        self.FullName = (dict.value(forKeyPath: "nombre") as! String) + " " +  (dict.value(forKeyPath: "apellido")as! String)
+                    
+                    let ref: DatabaseReference! = Database.database().reference()
+                    ref.child("comments").childByAutoId().setValue(["comment": self.commentTextField.text! as NSString, "full_name": self.FullName as NSString, "post_uid": self.uid as NSString])
                     if(self.commentTextField.text.count > 1)
-                    {
-                        self.commentTextField.text = ""
-                    }
+                                       {
+                                           self.commentTextField.text = ""
+                                       }
                 }
              }
         }

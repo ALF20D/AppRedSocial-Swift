@@ -24,23 +24,15 @@ class ProfileViewController: UIViewController {
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if(user != nil)
                    {
-                Firestore.firestore().collection("users")
-                    
-                    .whereField("uid", isEqualTo: auth.currentUser?.uid as Any)
-                    
-                     .getDocuments { (querySnapshot, err) in
-                            if err != nil {
-                                print("Ocurrió un error.")
-                            }
-                            for document in querySnapshot!.documents {
-                                self.documentId = document.documentID
-                                self.nombreTextField.text = document.data()["nombre"] as? String
-                                self.apellidoTextField.text = document.data()["apellido"] as? String
-                            }
-                       }
-                }
+                let ref: DatabaseReference! = Database.database().reference()
+                ref.child("users").child(auth.currentUser!.uid)
+                    .observeSingleEvent(of: DataEventType.value) { (DataSnapshot) in
+                        let dict = DataSnapshot.value as? NSDictionary
+                        self.nombreTextField.text = dict?.value(forKeyPath: "nombre") as? String
+                        self.apellidoTextField.text = dict?.value(forKeyPath: "apellido") as? String
+                    }
+            }
          }
-
     }
     
     
@@ -62,11 +54,9 @@ class ProfileViewController: UIViewController {
         GuardarButton.alpha = 0
         nombreTextField.isUserInteractionEnabled = false
         apellidoTextField.isUserInteractionEnabled = false
-        
-        // Update Firestore document...
         Auth.auth().addStateDidChangeListener { (auth, user) in
-            let dbRef = Firestore.firestore().collection("users").document(self.documentId)
-            dbRef.updateData(["nombre" : self.nombreTextField.text!, "apellido" : self.apellidoTextField.text!])
+            let ref: DatabaseReference! = Database.database().reference()
+            ref.child("users").child(auth.currentUser!.uid).updateChildValues(["nombre" : self.nombreTextField.text!, "apellido" : self.apellidoTextField.text!])
         }
     }
     

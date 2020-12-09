@@ -76,16 +76,8 @@ class SignUpViewController: UIViewController {
                 }
                 else
                 {
-                    let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: [
-                        "nombre": nombre,
-                        "apellido": apellido,
-                        "uid":result!.user.uid
-                    ]) { (error) in
-                        if error != nil {
-                            self.monstrarError("Ocurrió un error al guardar la información de usuario.")
-                        }
-                    }
+                    let ref = Database.database().reference()
+                    ref.child("users").child(result!.user.uid).setValue(["nombre": nombre, "apellido": apellido])
                     // Open...
                     self.transitionToFeed()
                 }
