@@ -15,7 +15,7 @@ class UsersTableViewCell: UITableViewCell {
     
     
     
-    func configure(fullname: String, follower_uid: String)
+    func configure(fullname: String)
     {
         FullNameLabel.text = fullname
     }

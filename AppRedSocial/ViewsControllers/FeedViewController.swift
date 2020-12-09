@@ -12,10 +12,8 @@ import Firebase
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var PostButton: UIButton!
-
     var fixedposts : [Dictionary<String, AnyObject>] = []
     var key_post : [String] = []
-
     @IBOutlet weak var TableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -24,9 +22,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.commentViewController) as? CommentsViewController
-        
         vc?.modalPresentationStyle = .popover
-        vc?.uid = key_post[indexPath.row] 
+        vc?.uid = key_post[indexPath.row]
         self.present(vc!, animated: true, completion: nil)
     }
     
@@ -77,14 +74,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         var ref: DatabaseReference!
                 ref = Database.database().reference().child("posts")
         ref.observe(DataEventType.value) { (snapshot) in
-            if self.fixedposts.count != 0
+            if self.fixedposts.count != 0 || self.key_post.count != 0
             {
                 self.fixedposts.removeAll()
-            }
-            if self.key_post.count != 0
-            {
                 self.key_post.removeAll()
             }
+            
             for child in snapshot.children.allObjects as! [DataSnapshot] {
                 self.key_post.append(child.key)
              let dict = child.value as! Dictionary <String, AnyObject>
