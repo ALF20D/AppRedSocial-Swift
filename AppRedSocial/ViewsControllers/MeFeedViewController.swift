@@ -16,6 +16,7 @@ class MeFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var key_post : [String] = []
     
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -103,5 +104,4 @@ class MeFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let indexPost: Int = indexPath![1] as Int
         Database.database().reference().child("posts").child(self.key_post[indexPost]).removeValue()
     }
-    
 }

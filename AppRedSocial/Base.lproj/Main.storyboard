@@ -289,7 +289,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="328" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2J2-5G-PPa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="141" width="414" height="721"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="5qC-iU-SK0">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -397,46 +397,30 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9W-Uq-vCk">
                                                             <rect key="frame" x="329" y="236" width="24" height="24"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="24" id="6wL-yk-eoh"/>
-                                                                <constraint firstAttribute="width" constant="24" id="PEE-rD-P8W"/>
-                                                            </constraints>
                                                             <state key="normal" image="delete-black-24dp"/>
                                                             <connections>
                                                                 <action selector="BorrarPublicacionClick:" destination="7tG-d5-t1I" eventType="touchUpInside" id="aem-Bz-NGW"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qtz-mw-GGa">
-                                                            <rect key="frame" x="311" y="286" width="76" height="24"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="24" id="lfH-dX-ynd"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Seguir" image="follow_the_signs-black-24dp">
-                                                                <color key="titleColor" systemColor="labelColor"/>
-                                                            </state>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="Qtz-mw-GGa" secondAttribute="bottom" constant="8" id="0FN-UB-cCs"/>
-                                                        <constraint firstItem="Qtz-mw-GGa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Lb4-zi-iuq" secondAttribute="trailing" constant="8" symbolic="YES" id="5Xi-Bt-T1V"/>
+                                                        <constraint firstItem="p9W-Uq-vCk" firstAttribute="leading" secondItem="hX9-qL-EMn" secondAttribute="trailing" constant="185" id="0BF-fy-Gu0"/>
                                                         <constraint firstItem="Lc3-9i-zO6" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="15" id="9X0-SH-M0Z"/>
                                                         <constraint firstItem="Lb4-zi-iuq" firstAttribute="top" secondItem="hX9-qL-EMn" secondAttribute="bottom" constant="19" id="9Xg-5S-7Xz"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Qtz-mw-GGa" secondAttribute="trailing" constant="25" id="CME-en-zrl"/>
                                                         <constraint firstItem="59L-JC-nIk" firstAttribute="top" secondItem="4Fg-lL-UUI" secondAttribute="top" constant="8" id="Eqw-L6-mu4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="p9W-Uq-vCk" secondAttribute="trailing" constant="59" id="F7B-iB-etT"/>
                                                         <constraint firstItem="hX9-qL-EMn" firstAttribute="leading" secondItem="BwZ-HY-3fH" secondAttribute="trailing" constant="16" id="FM7-qn-O4e"/>
                                                         <constraint firstItem="hX9-qL-EMn" firstAttribute="top" secondItem="Lc3-9i-zO6" secondAttribute="bottom" constant="7.5" id="R42-lc-PcN"/>
                                                         <constraint firstAttribute="trailing" secondItem="59L-JC-nIk" secondAttribute="trailing" constant="15" id="R4h-kG-fRx"/>
                                                         <constraint firstAttribute="bottom" secondItem="Lb4-zi-iuq" secondAttribute="bottom" constant="19" id="Y6J-sU-5Ix"/>
                                                         <constraint firstAttribute="trailing" secondItem="Lc3-9i-zO6" secondAttribute="trailing" constant="15" id="Y9X-Sx-jpk"/>
-                                                        <constraint firstAttribute="trailing" secondItem="p9W-Uq-vCk" secondAttribute="trailing" constant="59" id="YeB-oC-OvV"/>
-                                                        <constraint firstItem="Qtz-mw-GGa" firstAttribute="top" secondItem="p9W-Uq-vCk" secondAttribute="bottom" constant="26" id="bb1-5s-Nl3"/>
                                                         <constraint firstItem="BwZ-HY-3fH" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="10" id="dZc-LH-pBf"/>
                                                         <constraint firstAttribute="bottom" secondItem="BwZ-HY-3fH" secondAttribute="bottom" constant="61" id="m7s-KR-AI7"/>
                                                         <constraint firstAttribute="bottom" secondItem="Lc3-9i-zO6" secondAttribute="bottom" constant="90" id="p5r-Yx-ZJa"/>
+                                                        <constraint firstAttribute="bottom" secondItem="p9W-Uq-vCk" secondAttribute="bottom" constant="58" id="pmd-0C-ehU"/>
                                                         <constraint firstItem="Lb4-zi-iuq" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="128" id="qC5-HI-Twu"/>
                                                         <constraint firstItem="59L-JC-nIk" firstAttribute="leading" secondItem="4Fg-lL-UUI" secondAttribute="leading" constant="15" id="tQ3-e3-2xN"/>
-                                                        <constraint firstItem="p9W-Uq-vCk" firstAttribute="leading" secondItem="hX9-qL-EMn" secondAttribute="trailing" constant="185" id="tTW-HF-ObW"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lb4-zi-iuq" secondAttribute="trailing" constant="20" symbolic="YES" id="var-bJ-HUM"/>
                                                         <constraint firstAttribute="trailing" secondItem="hX9-qL-EMn" secondAttribute="trailing" constant="268" id="vhH-SK-7km"/>
                                                         <constraint firstItem="Lc3-9i-zO6" firstAttribute="top" secondItem="59L-JC-nIk" secondAttribute="bottom" constant="10" id="wA1-GG-bQo"/>
@@ -463,14 +447,27 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                     <outlet property="delegate" destination="7tG-d5-t1I" id="KWM-Jy-nAQ"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gn-bq-5ag">
+                                <rect key="frame" x="97" y="106" width="195" height="24"/>
+                                <state key="normal" title="Usuarios Registrados" image="account_box-black-24dp">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WqT-a3-15y" kind="show" id="wq2-C3-zMJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XGY-WN-MOe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2J2-5G-PPa" firstAttribute="trailing" secondItem="XGY-WN-MOe" secondAttribute="trailing" id="Wa4-mi-Mu5"/>
-                            <constraint firstItem="2J2-5G-PPa" firstAttribute="bottom" secondItem="XGY-WN-MOe" secondAttribute="bottom" id="YuL-PT-KI7"/>
-                            <constraint firstItem="2J2-5G-PPa" firstAttribute="top" secondItem="XGY-WN-MOe" secondAttribute="top" id="ekb-0C-0mA"/>
-                            <constraint firstItem="2J2-5G-PPa" firstAttribute="leading" secondItem="XGY-WN-MOe" secondAttribute="leading" id="pm7-2T-JBR"/>
+                            <constraint firstItem="2J2-5G-PPa" firstAttribute="leading" secondItem="XGY-WN-MOe" secondAttribute="leading" id="2GB-Wx-YwD"/>
+                            <constraint firstItem="2J2-5G-PPa" firstAttribute="top" secondItem="0Gn-bq-5ag" secondAttribute="bottom" constant="11" id="32A-Pm-Bqt"/>
+                            <constraint firstItem="XGY-WN-MOe" firstAttribute="trailing" secondItem="0Gn-bq-5ag" secondAttribute="trailing" constant="122" id="8S6-xQ-pc8"/>
+                            <constraint firstItem="2J2-5G-PPa" firstAttribute="trailing" secondItem="XGY-WN-MOe" secondAttribute="trailing" id="AUD-Yi-TKd"/>
+                            <constraint firstItem="0Gn-bq-5ag" firstAttribute="leading" secondItem="XGY-WN-MOe" secondAttribute="leading" constant="97" id="DI9-zL-U5O"/>
+                            <constraint firstItem="2J2-5G-PPa" firstAttribute="bottom" secondItem="XGY-WN-MOe" secondAttribute="bottom" id="DKN-uD-dRE"/>
+                            <constraint firstItem="0Gn-bq-5ag" firstAttribute="top" secondItem="XGY-WN-MOe" secondAttribute="top" constant="18" id="nMm-WB-EwZ"/>
+                            <constraint firstItem="2J2-5G-PPa" firstAttribute="top" secondItem="0Gn-bq-5ag" secondAttribute="bottom" constant="11" id="yau-a6-8vY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NQt-sn-eI9"/>
@@ -482,6 +479,34 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCj-Uh-LgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4856.521739130435" y="97.767857142857139"/>
+        </scene>
+        <!--List Users-->
+        <scene sceneID="3ZZ-NY-AYv">
+            <objects>
+                <viewController title="List Users" id="WqT-a3-15y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wlt-dW-ct9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GF4-iU-T1L">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wOQ-pM-GSS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GF4-iU-T1L" firstAttribute="top" secondItem="wOQ-pM-GSS" secondAttribute="top" id="941-vi-TA1"/>
+                            <constraint firstItem="wOQ-pM-GSS" firstAttribute="trailing" secondItem="GF4-iU-T1L" secondAttribute="trailing" id="kAQ-d9-TyX"/>
+                            <constraint firstItem="GF4-iU-T1L" firstAttribute="leading" secondItem="wOQ-pM-GSS" secondAttribute="leading" id="nsB-ui-BAq"/>
+                            <constraint firstItem="wOQ-pM-GSS" firstAttribute="bottom" secondItem="GF4-iU-T1L" secondAttribute="bottom" id="wAi-8s-lkc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="edC-bC-jIF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPO-CU-g3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5974" y="98"/>
         </scene>
         <!--Post-->
         <scene sceneID="C7W-Bh-ISU">
@@ -553,7 +578,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yt-3d-LKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5973.913043478261" y="-269.19642857142856"/>
+            <point key="canvasLocation" x="5974" y="-708"/>
         </scene>
         <!--Comments-->
         <scene sceneID="LPb-ea-qa1">
@@ -677,7 +702,7 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUB-Ev-VWq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5973.913043478261" y="569.86607142857144"/>
+            <point key="canvasLocation" x="5974" y="836"/>
         </scene>
         <!--Profile-->
         <scene sceneID="BCB-Zp-qbS">
@@ -935,6 +960,16 @@ Sed egestas lacus est, nec consequat libero vulputate at. Aliquam eleifend tinci
                                                             <state key="normal" image="delete-black-24dp"/>
                                                             <connections>
                                                                 <action selector="DeletePostClick:" destination="4m7-gh-Fis" eventType="touchUpInside" id="ZsF-cs-pxG"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isp-Uu-Bzf">
+                                                            <rect key="frame" x="314" y="286" width="76" height="24"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Seguir" image="follow_the_signs-black-24dp">
+                                                                <color key="titleColor" systemColor="labelColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="FollowClick:" destination="4m7-gh-Fis" eventType="touchUpInside" id="Gv7-px-bgI"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
