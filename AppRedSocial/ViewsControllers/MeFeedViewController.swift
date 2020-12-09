@@ -45,8 +45,7 @@ class MeFeedViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+  
         Auth.auth().addStateDidChangeListener { (auth, user) in
             self.user_uid = auth.currentUser!.uid
             self.tableView.rowHeight = UITableView.automaticDimension
