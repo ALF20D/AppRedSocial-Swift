@@ -16,6 +16,7 @@ struct Constants {
      static let feedViewController = "FeedVC"
      static let commentViewController = "CommentVC"
      static let postViewController = "PostVC"
+        static let meFeedViewcontroller = "FeedMeVC"
         
     }
 }
