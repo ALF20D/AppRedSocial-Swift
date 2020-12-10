@@ -1,23 +1,26 @@
 //
-//  UsersTableViewCell.swift
+//  TotalUsersTableViewCell.swift
 //  AppRedSocial
 //
-//  Created by Alvaro Fiestas on 8/12/20.
+//  Created by Alvaro Fiestas on 9/12/20.
 //  Copyright © 2020 Alvaro Fiestas. All rights reserved.
 //
 
 import UIKit
 
-class UsersTableViewCell: UITableViewCell {
-
+class TotalUsersTableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var FollowersQuantityLabel: UILabel!
     @IBOutlet weak var FullNameLabel: UILabel!
     
-    func configure(fullname: String)
+    
+    func configure(fullname: String, followers: Int)
     {
         FullNameLabel.text = fullname
+        FollowersQuantityLabel.text = String(followers)
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

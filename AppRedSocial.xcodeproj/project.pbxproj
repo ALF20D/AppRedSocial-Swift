@@ -28,6 +28,9 @@
 		A81042662580852C0060A24B /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81042652580852C0060A24B /* UsersTableViewCell.swift */; };
 		A810426D258086BD0060A24B /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A810426C258086BD0060A24B /* UsersViewController.swift */; };
 		A853B8BE2573184A008EB4AA /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A853B8BD2573184A008EB4AA /* CommentsViewController.swift */; };
+		A89D3F802581895F00A21B70 /* ProfileUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D3F7F2581895F00A21B70 /* ProfileUsersViewController.swift */; };
+		A89D3FAF2581A7C000A21B70 /* TotalUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D3FAE2581A7C000A21B70 /* TotalUsersViewController.swift */; };
+		A89D3FB22581A95700A21B70 /* TotalUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D3FB12581A95700A21B70 /* TotalUsersTableViewCell.swift */; };
 		A8DE78002574101D001446D4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE77FF2574101D001446D4 /* PostViewController.swift */; };
 		A8DE780325743C7A001446D4 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DE780225743C7A001446D4 /* CommentsCell.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,9 @@
 		A81042652580852C0060A24B /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		A810426C258086BD0060A24B /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		A853B8BD2573184A008EB4AA /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		A89D3F7F2581895F00A21B70 /* ProfileUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUsersViewController.swift; sourceTree = "<group>"; };
+		A89D3FAE2581A7C000A21B70 /* TotalUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUsersViewController.swift; sourceTree = "<group>"; };
+		A89D3FB12581A95700A21B70 /* TotalUsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUsersTableViewCell.swift; sourceTree = "<group>"; };
 		A8DE77FF2574101D001446D4 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A8DE780225743C7A001446D4 /* CommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +144,8 @@
 				A8DE77FF2574101D001446D4 /* PostViewController.swift */,
 				A810425F258046580060A24B /* MeFeedViewController.swift */,
 				A810426C258086BD0060A24B /* UsersViewController.swift */,
+				A89D3F7F2581895F00A21B70 /* ProfileUsersViewController.swift */,
+				A89D3FAE2581A7C000A21B70 /* TotalUsersViewController.swift */,
 			);
 			path = ViewsControllers;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				A8DE780225743C7A001446D4 /* CommentsCell.swift */,
 				A81042622580472B0060A24B /* MeFeedTableViewCell.swift */,
 				A81042652580852C0060A24B /* UsersTableViewCell.swift */,
+				A89D3FB12581A95700A21B70 /* TotalUsersTableViewCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,13 +282,16 @@
 			files = (
 				84A495E7253569D200DBECCE /* ViewController.swift in Sources */,
 				84A495E3253569D200DBECCE /* AppDelegate.swift in Sources */,
+				A89D3F802581895F00A21B70 /* ProfileUsersViewController.swift in Sources */,
 				84E4ABB6255A8EA20078A1CA /* Utilities.swift in Sources */,
 				A8DE78002574101D001446D4 /* PostViewController.swift in Sources */,
 				84DA71EC255AFA490072F3DB /* RecoverAccountViewController.swift in Sources */,
 				84E4ABAF255A87150078A1CA /* SignUpViewController.swift in Sources */,
+				A89D3FB22581A95700A21B70 /* TotalUsersTableViewCell.swift in Sources */,
 				848EB055255D710B009F4F2D /* TableViewCell.swift in Sources */,
 				A810426D258086BD0060A24B /* UsersViewController.swift in Sources */,
 				848EB05D255D7CEC009F4F2D /* ProfileViewController.swift in Sources */,
+				A89D3FAF2581A7C000A21B70 /* TotalUsersViewController.swift in Sources */,
 				84E4ABB1255A87270078A1CA /* LoginViewController.swift in Sources */,
 				A8104260258046580060A24B /* MeFeedViewController.swift in Sources */,
 				A853B8BE2573184A008EB4AA /* CommentsViewController.swift in Sources */,

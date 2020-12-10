@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class ProfileViewController: UIViewController {
-    var documentId: String = ""
+
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var apellidoTextField: UITextField!
     @IBOutlet weak var EditNombreButton: UIButton!

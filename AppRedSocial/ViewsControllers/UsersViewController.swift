@@ -11,6 +11,7 @@ import Firebase
 
 class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
+    var currentUID: String = ""
     var fixedUsers: [Dictionary<String, Any>] = []
     var Users_UID:  [String] = []
     @IBOutlet weak var tableview: UITableView!
@@ -29,16 +30,20 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableview.rowHeight = UITableView.automaticDimension
-        self.loadUsers {
-            self.tableview.reloadData()
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            self.currentUID = auth.currentUser!.uid
+            self.tableview.rowHeight = UITableView.automaticDimension
+            self.loadUsers {
+                self.tableview.reloadData()
+            }
         }
+        
     }
 
-    func loadUsers( completion:  @escaping () -> Void ) {
+     func loadUsers( completion:  @escaping () -> Void ) {
         let ref = Database.database().reference()
-        ref.child("users").observe(DataEventType.value) { (DataSnapshot) in
+        ref.child("users").child(self.currentUID).child("friends")
+            .observe(DataEventType.value) { (DataSnapshot) in
             if self.fixedUsers.count != 0 || self.Users_UID.count != 0
             {
                 self.fixedUsers.removeAll()
@@ -55,10 +60,13 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    @IBAction func Follow(_ sender: AnyObject) {
+
+    @IBAction func ProfileClick(_ sender: AnyObject) {
         let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableview)
         let indexPath = self.tableview.indexPathForRow(at: buttonPosition)
         let indexUser: Int = indexPath![1] as Int
-        Database.database().reference().child("users").child(self.Users_UID[indexUser]).updateChildValues(["followers" : ["quantity":ServerValue.increment(1)]])
+        let vc = storyboard?.instantiateViewController(identifier: Constants.Storyboard.usersPFController) as? ProfileUsersViewController
+        vc?.uidx = self.Users_UID[indexUser]
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }
