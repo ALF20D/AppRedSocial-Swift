@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController {
                 else
                 {
                     let ref = Database.database().reference()
-                    ref.child("users").child(result!.user.uid).setValue(["nombre": nombre, "apellido": apellido])
+                    ref.child("users").child(result!.user.uid).setValue(["nombre": nombre, "apellido": apellido, "followers": ["quantity":0]])
                     // Open...
                     self.transitionToFeed()
                 }
